@@ -3,54 +3,53 @@ import Book from "./book";
 
 let books = [
   {
-    image: "1.jpg",
+    file: "1.jpg",
     author: "Shawn Stevenson",
-    title: "Eat Smarter"
+    bookTitle: "Eat Smarter"
   },
   {
-    image: "2.jpg",
+    file: "2.jpg",
     author: "Andrea Hannemann",
-    title: "Plant over processed"
+    bookTitle: "Plant over processed"
   },
   {
-    image: "3.jpg",
+    file: "3.jpg",
     author: "Charlse Soule",
-    title: "Light of the Jedi"
+    bookTitle: "Light of the Jedi"
   },
   {
-    image: "4.jpg",
+    file: "4.jpg",
     author: "Tui T. Sutherland",
-    title: "Wings of Fire"
+    bookTitle: "Wings of Fire"
   },
   {
-    image: "5.jpg",
+    file: "5.jpg",
     author: "Bill Bryson",
-    title: "The Body"
+    bookTitle: "The Body"
   },
   {
-    image: "6.jpg",
+    file: "6.jpg",
     author: "Elton John",
-    title: "Me"
+    bookTitle: "Me"
   },
   {
-    image: "7.jpg",
+    file: "7.jpg",
     author: "Alexis Shaitkin",
-    title: "Saint X"
+    bookTitle: "Saint X"
   },
   {
-    image: "8.jpg",
+    file: "8.jpg",
     author: "K. J. Packer",
-    title: "Prosper's Demon"
+    bookTitle: "Prosper's Demon"
   }
 ];
 
 let BookList = () => {
   return (
     <div>
-      {" "}
-      {books.forEach(book => (
-        <Book file={book.image} author={book.author} bookTitle={book.title} />
-      ))}{" "}
+      {books.map(book => {
+        return <Book {...book} />;
+      })}
     </div>
   );
 };

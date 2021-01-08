@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 export const reducer = (state, action) => {
   if (action.type == "ITEM_ADDED") {
     const newPeople = [...state.people, action.payload];
